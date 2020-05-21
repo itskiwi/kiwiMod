@@ -1,0 +1,11 @@
+version: "2"
+services:
+  bdsmod:
+    image: codehz/wine:bdlauncher-runtime
+    container_name: bdsmod
+    volumes:
+      - ./config:/data
+    network_mode: host
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
